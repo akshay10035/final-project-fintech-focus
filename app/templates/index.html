@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Enter Data</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <style>
+            body{
+            background-image: url("https://i.kym-cdn.com/photos/images/facebook/001/051/805/e65.jpg");
+            }
+            h1 {
+                text-align: center;
+                font-family: "Courier New";
+                font-size:100px;
+            }
+            .subsection{
+                font-size:75px;
+                font-family: "Courier New";
+
+            }
+
+
+</style>
+    </head>
+    <body>
+        <header>
+        <h1> What are your X and Y axes?</h1>
+        
+        <form method='post' action='/dataEntry'>
+          <div class = "subsection">
+          X-Axis<br>
+          </div>
+          <input type="text" name="X-axis"><br>
+          <div class = "subsection">
+          Y-Axis<br>
+          </div>
+          <input type="text" name="Y-axis"><br>
+          <input type='submit'>
+        </form>
+        </div>
+      
+      
+        {% block content %}
+        {% endblock %}
+    
+    </body>
+</html>
