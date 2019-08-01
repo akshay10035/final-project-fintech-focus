@@ -9,16 +9,17 @@ def convert():
     mongo = PyMongo(app)
     collection = mongo.db.dataPoints
     axesNames = mongo.db.axes
-    #finalPointList = [[list(axesNames.find({'xName'})), list(axesNames.find({'yName'}))]]
+    finalPointList = []
     points = list(collection.find({}))
     print(points)
-    # for pointdata in points:
-    #     thisPair = []
-    #     thisPair = pointdata['xVal']
-    #     thisPair += pointdata['yVal']
-    #     finalPointList += thisPair
-    #return(finalPointList)
-    return[['x','y'],[0,1],[3,4]]
+    for pointdata in points:
+        thisPair = []
+        thisPair.append(pointdata['xVal'])
+        thisPair.append(pointdata['yVal'])
+        print(thisPair)
+        finalPointList.append(thisPair)
+    return(finalPointList)
+
     
 #print(convert())
     

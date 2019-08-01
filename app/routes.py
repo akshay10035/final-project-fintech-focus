@@ -12,25 +12,26 @@ points = list(collection.find({}))
 
 
 @app.route('/')
-@app.route('/signup', methods=['POST', 'GET'])
-def signup():
+# @app.route('/signup', methods=['POST', 'GET'])
+# def signup():
     
-    if 'username' not in session:
-        session['username'] = 'newUser'
-    if request.method == 'POST':
-        users = mongo.db.users
-        existing_user = users.find_one({'name' : request.form['username']})
-        if existing_user is None:
-            users.insert({'name' : request.form['username'], 'password' : request.form['password']})
-            session['username'] = request.form['username']
-            namedisplay = session['username']
-            return redirect(url_for('index'))
-        else:
-            return redirect(url_for('index'))
-    return render_template('signup.html')
+#     if 'username' not in session:
+#         session['username'] = 'newUser'
+#     if request.method == 'POST':
+#         users = mongo.db.users
+#         existing_user = users.find_one({'name' : request.form['username']})
+#         if existing_user is None:
+#             users.insert({'name' : request.form['username'], 'password' : request.form['password']})
+#             session['username'] = request.form['username']
+#             namedisplay = session['username']
+#             return redirect(url_for('index'))
+#         else:
+#             return redirect(url_for('index'))
+#     return render_template('signup.html')
 @app.route('/index')
 def index():
     #reset session variables
+    (mongo.db.dataPoints).remove({})
     return render_template('index.html')
     
 @app.route('/dataEntry', methods= ['GET','POST'])

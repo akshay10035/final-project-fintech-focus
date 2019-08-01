@@ -1,45 +1,66 @@
 <html>
-    <head>
-        <title>Enter Data</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <style>
-            /*body{*/
+
+<head>
+    <title>Enter Data</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body {
             /*background-image: url("https://i.kym-cdn.com/photos/images/facebook/001/051/805/e65.jpg");*/
-            /*}*/
-            h1 {
-                text-align: center;
-                font-family: "Courier New";
-                font-size:100px;
-            }
-            .subsection{
-                font-size:75px;
-                font-family: "Courier New";
+        }
 
-            }
+        h1 {
+            text-align: center;
+            font-family: "Courier New";
+            font-size: 100px;
+        }
+
+        .card {
             
+            
+        }
+    </style>
+</head>
 
-         </style>
-    </head>
-    <body>
-        <header>
-        <h1> What are your X and Y axes?</h1>
-        
-        <form method='post' action='/dataEntry'>
-          <div class = "subsection">
-          X-Axis<br>
-          </div>
-          <input type="text" name="X-axis"><br>
-          <div class = "subsection">
-          Y-Axis<br>
-          </div>
-          <input type="text" name="Y-axis"><br>
-          <input type='submit'>
-        </form>
+<body>
+
+
+
+
+    </div>
+    <div class="card">
+        <div class="row">
+            <div class="col s12 m12">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title"><h1> What are your X and Y axes?</h1> </span>
+                        <form method='post' action='/dataEntry'>
+                            <div class="subsection">
+                                X-Axis:<br>
+                            </div>
+                            <input type="text" name="X-axis"><br>
+                            <div class="subsection">
+                                Y-Axis:<br>
+                            </div>
+                            <input type="text" name="Y-axis"><br>
+                            <input type='submit'>
+                        </form>
+                    </div>
+                    <div class="card-action">
+
+                    </div>
+                </div>
+            </div>
         </div>
-      
-      
-        {% block content %}
-        {% endblock %}
-    
-    </body>
+    </div>
+
+    {% block content %} {% endblock %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+
 </html>

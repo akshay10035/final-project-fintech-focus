@@ -4,9 +4,16 @@
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
+      var apple = '{{reallyfinalPointList}}'
+      console.log(typeof apple)
+      var frog = ['x','y']
+      var coolApple = JSON.parse(apple)
+      coolApple.unshift(frog)
+      
+      console.log(coolApple)
+      
       function drawChart() {
-        // var data = google.visualization.arrayToDataTable(dataPoints); //change this to the correct variable name
-        var data = google.visualization.arrayToDataTable([['x', 'y'], [0, 1], [3, 4]]);
+        var data = google.visualization.arrayToDataTable(coolApple);
 
         var options = {
           hAxis: {minValue: 0, maxValue: 15},
