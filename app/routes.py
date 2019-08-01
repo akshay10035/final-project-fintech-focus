@@ -48,12 +48,13 @@ def data():
     pointdata = request.form
     #print(pointdata)
     dataPoints = mongo.db.dataPoints
+    axes = mongo.db.dataPoints
     xVal = float(pointdata["X-point"])
     yVal = float(pointdata["Y-point"])
     dataPoints.insert({"xVal":xVal, "yVal":yVal})
-    xName = collection["xName"]
-    yName = collection["yName"]
-    return render_template('dataEntry.html', xName = xName, yName = yName)
+    # xName = collections.find_one()
+    # yName = 
+    return render_template('dataEntry.html')
     
 @app.route('/results', methods=['GET','POST'])
 def results():
