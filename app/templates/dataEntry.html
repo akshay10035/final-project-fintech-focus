@@ -1,9 +1,12 @@
         
         <h1>Enter data</h1>
         <form method='post' action='/data'>
-          <br>{{xName}} value</br>
+          <br>X-value</br>
           <input type="text" name="X-point"><br>
-          <br>{{yName}} value</br>
+          <br>Y-value</br>
           <input type="text" name="Y-point"><br>
-          <input type="submit">
+          <input type="submit" value='Add point'>
+        </form>
+        <form method='post' action='/results'>
+          <input type='submit' value='Make graph'>
         </form>
