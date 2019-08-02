@@ -19,9 +19,8 @@
             font-size: 100px;
         }
 
-        .card {
-            
-            
+        .card-title {
+            padding:10px;
         }
     </style>
 </head>
@@ -37,17 +36,19 @@
             <div class="col s12 m12">
                 <div class="card blue-grey darken-1">
                     <div class="card-content white-text">
-                        <span class="card-title"><h1> What are your X and Y axes?</h1> </span>
+                        <span class="card-title teal lighten-2""><h1> What are your X and Y axes?</h1> </span>
                         <form method='post' action='/dataEntry'>
                             <div class="subsection">
-                                X-Axis:<br>
+                                <h2>X-Axis:</h2><br>
                             </div>
                             <input type="text" name="X-axis"><br>
                             <div class="subsection">
-                                Y-Axis:<br>
+                                <h2>Y-Axis:</h2><br>
                             </div>
                             <input type="text" name="Y-axis"><br>
-                            <input type='submit'>
+                            <button class="btn waves-effect waves-light buttonz" type="submit" name="action">Submit
+    <i class="material-icons right"</i>
+  </button>
                         </form>
                     </div>
                     <div class="card-action">
